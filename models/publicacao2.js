@@ -1,0 +1,50 @@
+'use strict';
+
+/* 
+lista e explicação dos Datatypes:
+https://codewithhugo.com/sequelize-data-types-a-practical-guide/
+*/
+
+module.exports = (sequelize, DataTypes) => {
+    let Leituras = sequelize.define('Leituras',{	
+		id_leitura: {
+			field: 'id_leitura',
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+			autoIncrement: true
+		},	
+        uso_cpu: {
+            field: 'uso_cpu',
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        },
+        uso_memoria: {
+            field: 'uso_memoria',
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        },
+		temperatura: {
+			field: 'temperatura',
+			type: DataTypes.DOUBLE,
+			allowNull: false
+		},
+		data_insercao: {
+			field: 'data_insercao',
+			type: DataTypes.DATE,
+			allowNull: false
+		},
+		fk_maquina: {
+			field: 'id_maquina',
+			type: DataTypes.INTEGER,
+			allowNull: false
+		}
+	}, 
+	{
+		tableName: 'tb_leitura', 
+		freezeTableName: true, 
+		underscored: true,
+		timestamps: false,
+	});
+
+    return Leituras;
+};

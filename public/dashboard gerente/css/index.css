@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #c9c9db;
+}
+
+.btn-padrao {
+    width: 100px;
+    height: 25px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 25px;
+    transition: 1s;
+}
+
+.btn-padrao:hover {
+    background-color: white;
+}
+
+.btn-padrao a:hover {
+    color: var(--purple);
+}
+
+.title {
+    font-family: 'nunito';
+    font-size: 24px;
+    color: var(--white);
+}
+
+.text {
+    font-family: 'nunito';
+    font-size: 16px;
+    color: var(--white);
+}
+
+.black-title {
+    font-family: 'nunito';
+    font-size: 24px;
+    color: var(--black);
+}
+
+.black-text {
+    font-family: 'nunito';
+    font-size: 16px;
+    color: var(--black2);
+}
+
+:root {
+    --primary: #9887f1;
+    --light-primary: #C6C1E3;
+    --purple: #5F62E7;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+    --light-green: #00A3B4;
+    --black2: #4d4b4b;
+}
+.container-content{
+background-color: rgb(240, 237, 243);
+height: 100vh;
+width: 100%;
+margin: 1.3em;
+border-radius: 15px;
+box-shadow: 8px 12px 20px -4px rgba(0,0,0,0.78);
+
+}
+.container-maps{
+height: auto;
+padding: 1em;
+}
+.mapa-maps{
+   display: flex;
+   justify-content: center;
+}
+.mapa-maps img{
+    width: 90%;
+}
+.areaMapa{
+  background-color: gray;
+  cursor: pointer;
+}

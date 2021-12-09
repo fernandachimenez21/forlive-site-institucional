@@ -1,0 +1,279 @@
+html, body{
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow-y: hidden;
+
+}
+
+/* Para trocar os tamanho de todos os textos do site, mude aqui embaixo */
+
+html{
+
+    /* a cada 1rem equivale a 10px */
+    font-size: 62.5%;
+
+}
+
+/* Estilizando a box principal, dividida em 3 linhas */
+
+.box-geral{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 60vh 10vh;
+
+    height: auto;
+    max-width: 100%;
+    width: 90%;
+
+    margin: 5vh auto;
+    background-color: rgb(160, 160, 253);
+    border-radius: 25px;
+    box-shadow: #7159c1 26px 30px 31px;
+
+}
+
+/* Estilizando Linha de cima da box principal em duas colunas*/
+
+.box-top{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 100px;
+
+}
+
+.box-top-left{
+
+    margin-top: 3rem;
+
+}
+
+/* Estilizando o nome da unidade */
+.nome-unidade{
+
+    height: 90%;
+    float: right;
+
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 5rem;
+    color: rgb(49, 121, 255);
+    text-shadow: black 2px 2px;
+    
+}
+
+/* Estilizando a linha do meio da box principal */
+
+main{
+
+    border: black solid 2px;
+    margin: 0 50px 20px;
+    overflow-y: scroll;
+
+}
+
+/* Estilizando scrollbar da linha do meio da box principal */
+
+::-webkit-scrollbar-track {
+
+    background-color:#7159c1;
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 20px;
+    background: rgb(64, 0, 148);
+    border: rgb(211, 165, 255) 2px solid;
+
+}
+
+/* Configurando cada card dos computadores */
+
+main > .box-computers{
+
+    height: 40%;
+    margin: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+    background-color: #7159c1;
+    border-radius: 50px;
+    transition: all 250ms linear 0s;
+
+}
+
+main > .box-computers:hover{
+
+    height: 50%;
+    background-color: #7159c1;
+    margin: 20px;
+    border-radius: 50px;
+    transition: all 250ms linear 0s;
+    
+}
+
+/* Estilizando a img do pc no lado esquerdo do card */
+.box-computers > .img-computer{
+
+    height: 100%;
+    width: 50%;
+    transition: all 250ms linear 0s;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.box-computers:hover > .img-computer{
+
+    width: 60%;
+    height: 90%;
+    transition: all 250ms linear 0s;
+    margin-top: 2%;
+
+}
+
+/* Estilizando o grafico do lado direito do card */
+.box-computers > .img-grafico{
+
+    height: 80%;
+    width: 70%;
+    transition: all 250ms linear 0s;
+    margin-top: 20px;
+    margin-left: 20%;
+
+}
+
+.box-computers:hover > .img-grafico{
+
+    height: 70%;
+    width: 75%;
+    transition: all 250ms linear 0s;
+    margin-top: 40px;
+
+}
+
+/* Estilizando o tamanho da img, para ela preencher toda div que foi colocada */
+.img-computer img, .img-grafico img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Estilizando a box central ( entre a img do pc e do grafico ) dentro dos cards */
+.box-computers > .box-middle{
+    
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    transition: all 250ms linear 0s;
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.box-computers:hover > .box-middle{
+    
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    transition: all 250ms linear 0s;
+    margin-top: 30px;
+
+}
+
+/* Configurando a ultima linha da box principal */
+footer{
+
+    margin: 0 7% 2%;
+    font-size: 3rem;
+    color: rgb(49, 121, 255);
+    text-shadow: black 2px 2px;
+    cursor: pointer;
+
+}
+
+ .box-suporte{
+
+    display: none;
+    grid-template-columns: 1fr 2fr;
+
+    max-width: 45%;
+    width: 45%;
+    height: 200px;
+    margin-top: -35rem;
+    margin-left: 10rem;
+    z-index: 10;
+    border: rgb(64, 0, 148) 5px solid;
+    background-color: rgb(128, 47, 235);
+    position: relative;
+    border-radius: 30px;
+
+}
+
+.img-user{
+
+    height:150px;
+    margin: 20px 30px;
+    float: left;
+
+}
+
+.name-user{
+
+    margin-top: 20px;
+    font-size: 3rem;
+    float: left;
+    border-bottom: black 2px double;
+    
+}
+
+.img-exit{
+
+    float: right;
+    margin: 20px;
+
+}
+
+.box-right{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+
+}
+
+.ramal-tecnico{
+
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.telefone-tecnico{
+
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.email-tecnico{
+
+    font-size: 2.5rem;
+
+}

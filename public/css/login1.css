@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+ /* inicio, css formulario login*/
+ 
+ body, input {
+     font-family: "poppins", sans-serif;
+ }
+
+ /* position define regras para posionar elementes. o relative o deixa em seu
+ lugar em relaxão aos outros elementos, mas pode ser deslocado.
+ min-heigh define a altura minima. impede que o heigh se torne menor
+ overflow: hidden, corta o conteudo que passar da div.
+ */
+
+ .login-container {
+     position: relative;
+     width: 100%;
+     min-height: 100vh;
+     background-color: white;
+     overflow: hidden; /* corta o conteudo que passar da div*/
+ }
+ 
+ /* classes que diferenciam cada usuario */
+ .empresa {
+    background: white;
+    color: #4448D6;
+    border: #4448D6;
+}
+    
+.empresa:hover {
+    background: #dadcf5;
+    color: #4448D6;
+    border: 2px solid #4448D6;
+}
+
+ .funcionario {
+  background: #ffffff;
+  color: #FBC84F;
+  border: #FBC84F;
+}
+  
+.funcionario:hover {
+  background: #ffffff;
+  color: #FBC84F;
+  border: 2px solid #FBC84F;
+}
+
+.adm {
+  background: white;
+  color: #111598;
+  border: #111598;
+}
+  
+.adm:hover {
+  background: #ffffff;
+  color: #111598;
+  border: 2px solid #111598;
+}
+
+ /* position absolute pode posicionar qualquer elemento de acordo com o pai.
+ 
+ top = especifica a posiçao vertical de acordo com o topo. dado o position, especifica a distancia
+ a partir da margem superior do objeto
+ 
+ left = afeta a posiçao horizontal de um objeto dado como position*/
+ .forms-container {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+
+ }
+
+ .login-cadastro {
+     position: absolute;
+     top: 50%;
+     left: 75%;
+     transform: translate(-50%, -50%); /*reposiciona um elemento na direção horizontal e/ou vertical */
+     width: 50%;
+     display: grid;
+     grid-template-columns: 1fr;
+     z-index: 5;
+     transition: 1s 0.7s ease-in-out;
+ }
+
+ /* 
+ display flex = os elementos vao estar flexiveis dentro do elemento pai.
+ align-items = alinha todos os filhos da tag form
+ justificy center = alinha os items no eixo principal
+ flex-direction = define como os itemns sao colocados no container
+ */
+
+ .login-cadastro form {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 0rem 5rem;
+     overflow: hidden;  /* corta o conteudo que passar da div*/
+     grid-column: 1 / 2; /* Separa o formulario em 2 colunas */
+     grid-row: 1 / 2;  /* Separa o formulario em 2 linhas */
+     transition: all 0.2s 0.7s;
+     height: 800px;
+     position: relative;
+     bottom: 40px;
+    }
+
+ .form-login {
+    z-index: 2; /* especifica a ordem -z de um elemento e de seus herdeiros */
+ }
+
+ .form-cadastro {
+    z-index: 1; /* especifica a ordem -z de um elemento e de seus herdeiros */
+    opacity: 0;
+    
+}
+
+.form-login-adm {
+  z-index: 1; /* especifica a ordem -z de um elemento e de seus herdeiros */
+  opacity: 0;
+  
+}
+
+
+ .login-cadastro .subtitulo-padrao {
+
+    /* font-size: 2.2rem;
+    color: #444; */
+    margin-bottom: 10px;
+
+ }
+
+ /* max width = largura maximo do campo
+ border radius =  angulo da borda/raio 
+ display grid = os elementos filhos se tornam grid
+ grid columns = cria colunas em linhas*/
+
+ /* Estilizando o campo input */
+ .input-field {
+     max-width: 380px;
+     width: 100%;
+     height: 55px;
+     background-color: #f8f8f8;
+     margin: 10px 0;
+     border-radius: 55px;
+     display: grid;
+     grid-template-columns: 15% 85%;
+     padding: 0 0.4rem;
+     position: relative;
+ }
+
+
+ 
+/* icones ao lado da input */
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #4448D6;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+/* .empresa
+.input-field i .funcionario {
+  text-align: center;
+  line-height: 55px;
+  color: #FBC84F;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+.input-field i .admin{
+  text-align: center;
+  line-height: 55px;
+  color: #111598;
+  transition: 0.5s;
+  font-size: 1.1rem;
+} */
+  .senha {
+    width: 800px;
+    height: 50px;
+    font-size: 13px;
+   
+  }
+
+  .senha1{
+    font-size: 15px;
+    position: relative;
+    top: 40px;
+     right: 50px;
+  }
+
+  .senhaSumir {
+    height: 0;
+    width: 0;
+  }
+
+ 
+
+
+.painel-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* Criar uma imagem atrás do container */
+.login-container:before .empresa {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4448D6, #CEF1F2);  /* #4481eb, #04befe*/
+    top: -10%; /*aumenta a imagem*/
+    right: 50%; /*posiciona para a esquerda*/
+    transform: translateY(-50%); /*posiciona no eixo para cima*/
+    z-index: 6;
+    background-image: linear-gradient(-45deg, #4448D6 0%,#CEF1F2 100%); /*(-45deg, #4481eb 0%, #04befe 100%)*/
+    transition: 1.8s ease-in-out;
+   
+   }
+.login-container:before .funcionario {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #FBC84F, #eef2ce);  /* #4481eb, #04befe*/
+    top: -10%; /*aumenta a imagem*/
+    right: 50%; /*posiciona para a esquerda*/
+    transform: translateY(-50%); /*posiciona no eixo para cima*/
+    z-index: 6;
+    background-image: linear-gradient(-45deg, #FBC84F 0%,#CEF1F2 100%); /*(-45deg, #4481eb 0%, #04befe 100%)*/
+    transition: 1.8s ease-in-out;
+   }
+.login-container:before, .admin {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #111598, #CEF1F2);  /* #4481eb, #04befe*/
+    top: -10%; /*aumenta a imagem*/
+    right: 50%; /*posiciona para a esquerda*/
+    transform: translateY(-50%); /*posiciona no eixo para cima*/
+    z-index: 6;
+    background-image: linear-gradient(-45deg, #111598 0%,#CEF1F2 100%); /*(-45deg, #4481eb 0%, #04befe 100%)*/
+    transition: 1.8s ease-in-out;
+   }
+
+.painel-container .painel .content {
+       color: #fff;
+       transition: .9s .6s ease-in-out;
+   }
+
+.painel-container .painel {
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+}
+
+.painel-esquerdo {
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+
+.painel-direito {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+    align-items: flex-end;
+
+}
+
+.painel-container .painel h3 {
+     /* font-weight: 600; */
+     line-height: 1;
+     /*font-size: 1.5rem; */
+     color: #fff;
+     padding: 5px 0;
+}
+
+.painel-container .painel p {
+    font-size: 18px;
+    padding: 15px 0;
+    color: #fff;
+
+}
+
+
+ 
+    
+     /*mesmo tendo movido o painel direito para a direita, ainda não consigo clicar no formulário ou
+      fazer algo com ele 
+      
+     Portanto, precisamos trazer os dois painéis sobre o contêiner de formulários usando
+      a propriedade z-index no container, painel e */
+
+      .painel-direito .image,
+      .painel-direito .content {
+        transform: translateX(800px);
+      }
+      
+      /* animaçao*/
+
+      .login-container.sign-up-mode:before {
+        transform: translate(100%, -50%);
+        right: 52%;
+      }
+      
+      .login-container.sign-up-mode .painel-esquerdo .image,
+      .login-container.sign-up-mode .painel-esquerdo .content {
+        transform: translateX(-800px);
+      }
+      
+      .login-container.sign-up-mode .login-cadastro {
+        left: 25%;
+      }
+      
+      .login-container.sign-up-mode form.form-cadastro {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .login-container.sign-up-mode form.form-login-adm {
+        opacity: 1;
+        z-index: 2;
+      }
+      
+      .login-container.sign-up-mode form.form-login {
+        opacity: 0;
+        z-index: 1;
+      }
+      
+      .login-container.sign-up-mode .painel-direito .image,
+      .login-container.sign-up-mode .painel-direito .content {
+        transform: translateX(0%);
+      }
+      
+      .login-container.sign-up-mode .painel-esquerdo {
+        pointer-events: none;
+      }
+      
+      .login-container.sign-up-mode .painel-direito {
+        pointer-events: all;
+      }
+      /*23:50 */
+/* Estilos padrão */
+
+
+
+/* todos os botões devem ter essa class */
+/* .btn-padrao {
+  outline:none;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+  border-radius:50px;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size:12px;
+  font-weight:bold;
+  border: #ffffff00;
+  cursor: pointer;
+  position: relative;
+  top: 60px;
+  } */
+
+  /* padronização dos inputs */
+input[type="text"] {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  width: 300px;
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1.5em;
+  background: #fff;
+  resize: none;
+  outline: none;
+
+}
+input[type="text"][required]:focus .empresa {
+  border-color: #4448D6;
+}
+input[type="text"][required]:focus .funcionario {
+  border-color: #FBC84F;
+}
+input[type="text"][required]:focus .admin {
+  border-color: #111598;
+}
+input[type="text"][required]:focus + label[placeholder]:before, .empresa {
+  color: #4448D6;
+}
+input[type="text"][required]:focus + label[placeholder]:before, .funcionario {
+  color: #FBC84F;
+}
+input[type="text"][required]:focus + label[placeholder]:before, .admin {
+  color: #111598;
+}
+input[type="text"][required]:focus + label[placeholder]:before,
+input[type="text"][required]:valid + label[placeholder]:before {
+  transition-duration: 0.2s;
+  transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+input[type="text"][required]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+}
+input[type="text"][required] + label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+input[type="text"][required] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(1em + 2px);
+  padding: 0 2px;
+  color: #898989;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="password"] {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  width: 300px;
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1.5em;
+  background: #fff;
+  resize: none;
+  outline: none;
+
+}
+input[type="password"][required]:focus .empresa {
+  border-color: #4448D6;
+}
+input[type="password"][required]:focus .funcionario {
+  border-color: #FBC84F;
+}
+input[type="password"][required]:focus .admin {
+  border-color: #111598;
+}
+input[type="password"][required]:focus + label[placeholder]:before, .empresa {
+  color: #4448D6;
+}
+input[type="password"][required]:focus + label[placeholder]:before, .funcionario {
+  color: #FBC84F;
+}
+input[type="password"][required]:focus + label[placeholder]:before, .admin {
+  color: #111598;
+}
+input[type="password"][required]:focus + label[placeholder]:before,
+input[type="password"][required]:valid + label[placeholder]:before {
+  transition-duration: 0.2s;
+  transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+input[type="password"][required]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+}
+input[type="password"][required] + label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+input[type="password"][required] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(1em + 2px);
+  padding: 0 2px;
+  color: #898989;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* fim padronização dos inputs */
+
+
+ 
+@media (max-width: 950px) {
+  .login-container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .login-cadastro {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .login-cadastro,
+  .login-container.sign-up-mode .login-cadastro {
+    left: 50%;
+  }
+
+  .painel-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  .painel-container .painel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .painel-direito {
+    grid-row: 3 / 4;
+  }
+
+  .painel-esquerdo {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .painel-container .painel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+    padding-bottom: 115px;
+  }
+
+  .painel-container .painel h3 {
+    font-size: 1.2rem;
+  }
+
+  .painel-container .painel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .painel.painel-direito h3{
+    padding-top: 145px;
+  }
+
+  .btn-transparente {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .login-container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .login-container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .login-container.sign-up-mode .painel-esquerdo .image,
+  .login-container.sign-up-mode .painel-esquerdo .content {
+    transform: translateY(-300px);
+  }
+
+  .login-container.sign-up-mode .painel-direito .image,
+  .login-container.sign-up-mode .painel-direito .content {
+    transform: translateY(0px);
+  }
+
+  .painel-direito .image,
+  .painel-direito .content {
+    transform: translateY(300px);
+  }
+
+  .login-container.sign-up-mode .login-cadastro {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+  .btn-padrao{
+    top: 5px;
+  }
+
+  .login-cadastro form{
+    height: 650px;
+  }
+}

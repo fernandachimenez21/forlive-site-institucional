@@ -1,0 +1,140 @@
+
+main{
+    display: flex;
+}
+
+html body {
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary: #9887f1;
+    --light-primary: #C6C1E3;
+    --purple: #5F62E7;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+    --light-green: #00A3B4;
+    --black2: #4d4b4b;
+}
+
+::-webkit-scrollbar-track {
+    background-color:indigo;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 20px;
+    background: rgb(139, 89, 139);
+
+}
+.text {
+    font-family: 'nunito';
+    font-size: 16px;
+    color: var(--white);
+}
+
+.container-nav {
+    height: 100vh;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+}
+
+.itens-nav-dash {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.content-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-logout {
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.container-dash-suporte {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+
+.content-title-dash-suporte {
+    height: 25vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-registros-dash {
+    height: 70vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-registros-dash {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--purple);
+    border-radius: 25px;
+    overflow-y: scroll;
+}
+
+.box-registro {
+    width: 900px;
+    height: 200px;
+    background-color: var(--primary );
+    margin: 20px;
+    display: flex;
+    border-radius: 25px;
+}
+
+.box-item-registro {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

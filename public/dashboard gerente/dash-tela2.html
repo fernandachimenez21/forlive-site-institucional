@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/image-removebg-preview (2).png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/dash.css">
+
+    <title>4Live|Dashboard gerente</title>
+
+</head>
+<body id="body">
+                            
+    <div class="box-geral" id="box_geral">
+
+        <header class="box-top">
+
+        <div class="box-top-left" >
+
+            <img src="img/back.png" onclick="back()" alt="Voltar">
+
+        </div>
+        <div class="box-top-right">
+
+            <div class="nome-unidade">JABA 1</div>
+
+        </div>
+
+        </header>
+
+        <main>
+
+        <div class="box-computers">
+
+            <div class="img-computer"> 
+                <img src="img/Control Panel-cuate (1).png" alt="">
+            </div>
+
+            <div class="box-middle">
+            
+                <div>Uso de cpu:</div>
+                <div>Uso de memória:</div>
+                <div>Uso de disco:</div>
+            
+            </div>
+
+            <div class="img-grafico">
+
+                <img src="img/grafico.png" alt="">
+
+            </div>
+            
+        </div>
+
+<!-- -------------------------------------------------------------------- -->
+
+        <div class="box-computers">
+                
+            <div class="img-computer"> 
+                <img src="img/Control Panel-cuate (1).png" alt="">
+            </div>
+
+            <div class="box-middle">
+            
+                <div>Uso de cpu:</div>
+                <div>Uso de memória:</div>
+                <div>Uso de disco:</div>
+            
+            </div>
+
+            <div class="img-grafico img">
+
+                <img src="img/grafico.png" alt="">
+
+            </div>
+
+        </div>
+
+<!-- -------------------------------------------------------------------- -->
+
+        <div class="box-computers">
+
+            <div class="img-computer"> 
+                <img src="img/Control Panel-cuate (1).png" alt="">
+            </div>
+
+            <div class="box-middle">
+            
+                <div>Uso de cpu:</div>
+                <div>Uso de memória:</div>
+                <div>Uso de disco:</div>
+            
+            </div>
+
+            <div class="img-grafico img">
+
+                <img src="img/grafico.png" alt="">
+
+            </div>
+            
+        </div>
+
+<!-- -------------------------------------------------------------------- -->
+
+        <div class="box-computers">
+
+            <div class="img-computer"> 
+                <img src="img/Control Panel-cuate (1).png" alt="">
+            </div>
+
+            <div class="box-middle">
+            
+                <div>Uso de cpu:</div>
+                <div>Uso de memória:</div>
+                <div>Uso de disco:</div>
+            
+            </div>
+
+            <div class="img-grafico img">
+
+                <img src="img/grafico.png" alt="">
+
+            </div>
+            
+        </div>
+    
+    </main>
+    
+    
+    <footer onclick="abrirModal()">Contatar suporte</footer>
+    
+</div>
+
+<div class="box-suporte" id="box_suporte">
+
+    <div class="box-left img-usuario">
+
+        <img src="img/user.png" alt="imagem do usuario" class="img-user">
+        
+    </div>
+
+    <div class="box-right">
+
+        <div class="line1-box-right">
+
+            <img id="exit_modal" src="img/cancel.png" alt="Sair" class="img-exit"
+            onclick="fecharModal()">            
+
+            <div class="name-user">Nome do Técnico</div>
+
+        </div>
+
+        <div class="line2-box-right">
+
+            <div class="ramal-tecnico">Ramal:</div>
+
+            <div class="telefone-tecnico">telefone:</div>
+
+        </div>
+
+        <div class="line3-box-right">
+
+            <div class="email-tecnico">email:</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+function abrirModal(){
+
+    box_suporte.style.display = "grid";
+
+}
+
+function fecharModal(){
+
+    box_suporte.style.display = "none";
+
+}
+
+function back(){
+
+    window.location = "index.html"
+
+}
+
+</script>

@@ -1,0 +1,160 @@
+:root {
+    --primary: #9887f1;
+    --light-primary: #e1e2eb;
+    --purple: #5F62E7;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+    --light-green: #00A3B4;
+    --black2: #4d4b4b;
+    --blue-gray:#c9c9db;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    display: flex;
+}
+
+.container-dash-gerente {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--blue-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-dash-gerente {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-dash-gerente {
+    width: 100%;
+    height: 8vh;
+}
+
+.content-header-dash-gerente {
+    height: 100%;
+    width: 85%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.line-boxes {
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.boxes-suporte {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.title-box {
+    font-family: 'nunito';
+    font-size: 19px;
+    color: var(--black);
+}
+
+.box {
+    background-color: var(--light-primary);
+    border: 2px solid var(--purple);
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-grafico-box {
+    width: 50%;
+}
+
+.content-grafico {
+    width: 33%;
+    height: 200px;
+}
+
+.container-grafico {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    
+}
+
+.content-respiro {
+    background-color: var(--white);
+    border-radius: 25px;
+    width: 95%;
+    height: 85%;
+    padding: 10px;
+    box-shadow: 5px 5px 5px var(--black2);
+
+}
+
+@media(max-width: 1080px) {
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        height: auto;
+        width: 80%;
+    }
+
+    .line-boxes {
+        height: auto;
+    }
+
+    .container-grafico {
+        flex-direction: column;
+        grid-gap: 40px;
+    }
+
+    .content-grafico {
+        height: auto;
+        width: 90%;
+        }
+
+    .container-dash-gerente {
+        height: fit-content;
+    }
+
+    .content-respiro {
+        height: 95%;
+        
+    }
+
+}
+

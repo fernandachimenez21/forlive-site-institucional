@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+.div-mapa {
+    height: 70vh;
+    width: 100%;
+    background-color: #4448D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-mapa {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-map {
+    width: 100%;
+  }
+  
+  .text-move {
+    height: 50%;
+    margin-top: 40px;
+    text-align: center;
+    width: 360px;
+  }
+  
+  .mapa {
+    width: 100vw;
+    height: 40vh;
+    padding-top: 20px;
+    border: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  p{
+    font-size: 20px;
+    height: 20vh;
+  }

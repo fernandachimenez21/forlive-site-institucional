@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Chatbot - 4LIVE</title>
+</head>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "8ff019d2-46fe-48e8-86d2-0cb165f8a6c2", // Incluir aqui o ID de integração
+      region: "us-south", // Host da região do assistente
+      serviceInstanceID: "41a8be72-f64e-4e3b-8aab-a219a9bb8232", // Incluir o ID da instância
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+    document.head.appendChild(t);
+  });
+</script>
+<body>
+    <div id="gif"></div>
+</body>
+</html>

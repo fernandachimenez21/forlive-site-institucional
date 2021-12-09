@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/image-removebg-preview (2).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="css/dash_colaborador.css">
+    <link rel="shortcut icon" href="">
+    <title>4Live|Colaborador</title>
+</head>
+
+<body onload="teste()">
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">4LIVE</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-headset"></i>
+                    <span class="links_name">Suporte</span>
+                </a>
+                <span class="tooltip">Suporte</span>
+            </li>
+
+            <li class="profile">
+                <a href="#">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    <span class="links_name">Sair</span>
+                </a>
+                <span class="tooltip">Sair</span>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+
+        <div class="text">Analytics - Recepção 01</div>
+        <div class="user-text">Bem-vindo Colaborador X!</div>
+
+        <div class="container_grafico">
+
+            <div class="desempenho">
+
+                <div class="quadros">
+
+                    <h1>PC 040521 - Windows</h1>
+
+                    <!-- CARD CPU -->
+
+                    <a href="">
+
+                        <div class="components" id="comp" onclick="btn_seletor()" name="teste">
+
+                            <p>Uso CPU%</p>
+
+                        </div>
+
+                    </a>
+
+                    <!-- FIM CARD CPU  -->
+
+                    <!-- CARD DISCO  -->
+
+                    <a href="">
+
+                        <div class="components">
+
+                            <p>Memória Livre do Disco</p>
+
+                        </div>
+
+                    </a>
+
+                    <!-- FIM CARD DISCO  -->
+
+                    <!-- CARD MEMÓRIA -->
+
+                    <a href="">
+
+                        <div class="components">
+
+                            <p>Uso de Memória</p>
+
+                        </div>
+
+                    </a>
+
+                    <!-- FIM CARD MEMORIA -->
+
+                    <a href="">
+
+                        <div class="components">
+
+                            <p>N° de Processos</p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+            <div class="grafico">
+                <h1> Uso em Dias da Semana </h1>
+
+                <div class="meu-grafico">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                
+
+            </div>
+
+            <!-- QUADRO DICAS  -->
+
+            <div class="box-dicas">
+
+                <h1>Dicas de Produtividade:</h1>
+
+                <a href="">
+
+                    <div class="dicas">
+
+                        <p>Relatório Semanal</p>
+
+                    </div>
+
+                </a>
+
+               <a href="Produtividade.html" onclick="btn_seletor()">
+
+                    <div class="dicas">
+
+                        <p>Gestão de Produtividade</p>
+
+                    </div>
+
+                </a>
+                <!-- FIM QUADRO DICAS  -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+
+<script>
+    function teste() {
+        var ctx = document.getElementById('myChart');
+
+
+        var meuGrafico = new Chart(ctx, {
+
+            type: 'doughnut',
+
+            data: {
+                labels: ['12:30', '12:40', '12:50', '13:00', '13:10'],
+                datasets: [{
+                        label: "",
+                        data: [10, 20, 30, 40, 50],
+                        borderWidth: 2,
+
+                        borderColor: '#4446d6',
+
+                    },
+
+
+                ]
+            },
+
+            options: {
+
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: true,
+                    reverse: true,
+                    position: 'bottom'
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        top: 50
+                    },
+
+                },
+
+                gridLines: {
+                    display: false
+                },
+            }
+        })
+    }
+
+    //    MANIPULANDO A NAV 
+    const sidebar = document.querySelector(".sidebar");
+    const closeBtn = document.querySelector("#btn");
+    const searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //
+    });
+
+    searchBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+    });
+
+    function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+    }
+</script>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>4Live | Login</title>
+</head>
+
+<body>
+  <main class="main">
+    <section class="container-login">
+      <div class="content-login">
+        <form class="form-login" id="form_login" method="post" onsubmit="return entrar()">
+          <a href="index.html">
+            <img src="img/image-removebg-preview (2).png" alt="logo 4live">
+          </a>
+          <span>
+            <h1 class="title">Faça o seu login</h1>
+          </span>
+          <span class="item-login">
+            <h2 class="text">E-mail</h2>
+            <input type="text" class="ipt-padrao" name="email" id="ipt_email">
+          </span>
+          <span class="item-login">
+            <h2 class="text">Senha</h2>
+            <input type="password" class="ipt-padrao" name="senha" id="ipt_senha">
+          </span>
+          <span class="box-btn-login">
+            <button class="btn-padrao" type="submit">Entrar</button>
+            <div id="msg_erro"></div>
+          </span>
+        </form>
+      </div>
+    </section>
+    <section class="container-img-login">
+      <div class="content-img-login">
+        <div class="img-login">
+
+
+          <div class="social-col">
+            <div class="social-links">
+              <span>
+                <p>Facebook</p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </span>
+              <span>
+                <p>Twitter</p>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </span>
+              <span>
+                <p>Instagram</p>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </span>
+              <span>
+                <p>Linkedin</p>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </span>
+            </div>
+            <div class="img-aprenta">
+              <h1>Bem vindo(a) à 4live</h1>
+              <p>Monitoramento de sistemas </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <script>
+    function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.email;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.id_usuario_meuapp = json.id_usuario;
+                    sessionStorage.senha_usuario_meuapp = json.senha;
+                    sessionStorage.nvl_acesso_meuapp = json.nivel_acesso;
+                    sessionStorage.id_unidade_meuapp = json.id_unidade;
+
+                    if(sessionStorage.nvl_acesso_meuapp == 1) {
+                      window.location.href = './dashboard gerente/index.html';
+                    } else if (sessionStorage.nvl_acesso_meuapp == 2) {
+                      window.location.href = "./dashboard suporte/index_suport.html";
+                    }
+                });
+
+            } else {
+
+                resposta.then(String => {
+                  msg_erro.innerHTML = resposta;
+                });
+                console.log('Erro de login!');
+                msg_erro.innerHTML = `Email e/ou senha inválido(s)`;
+              
+            }
+        });
+
+        return false;
+    }
+  </script>
+    
+    
+    
+
+
+  

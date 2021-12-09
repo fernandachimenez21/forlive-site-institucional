@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://s1.1zoom.me/b5050/210/376711-alexfas01_2560x1440.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(20, 15, 94);
+    background-repeat: no-repeat;
+}
+
+#gif {
+    width: 35%;
+    height: 500px;
+    /* background-image: url('https://c.tenor.com/hE0T8D0GpXsAAAAC/joinblink-blink.gif'); */ 
+    background-image: url('https://static.wixstatic.com/media/66bdae_6996c9a9cc9640a396a6e225cefc6951~mv2.gif');
+    background-position: center;
+    /* background-color: rgb(20, 15, 94); */
+    background-repeat: no-repeat;
+    margin: auto 0;
+}

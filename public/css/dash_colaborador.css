@@ -1,0 +1,169 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+
+.container_grafico {
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+}
+
+/* ICON SUPORTE */
+.fa-headset:before {
+    content: "\f509";
+    /* F500 */
+}
+
+/* ICON LOGOUT */
+.bx-log-out:before {
+    content: "\eab0";
+}
+
+.quadros {
+    width: 90%;
+    height: 50vh;
+}
+
+
+.desempenho {
+    margin-top: 0%;
+    width: 40%;
+    float: left;
+}
+
+.components {
+    border-radius: 20px;
+    text-align: center;
+    width: 42%;
+    border-radius: 8px;
+    float: left;
+    margin: 15px;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 42px;
+    background: rgb(158, 97, 252);
+    background: linear-gradient(158deg, rgba(158, 97, 252, 1) 0%, rgba(44, 49, 182, 1) 100%);
+}
+
+a {
+    color: #fff;
+}
+
+.box-dicas {
+    width: 110%;
+    float: left;
+    margin: auto;
+}
+
+/* BOX DE DICAS H1*/
+.box-dicas h1 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 32px;
+}
+
+/* FIM BOX DE DICAS H1*/
+
+/* BOX DE DICAS*/
+.dicas {
+    width: 17%;
+    float: left;
+    margin-left: 3vh;
+    height: 10vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(158, 97, 252);
+    background: linear-gradient(158deg, rgba(158, 97, 252, 1) 0%, rgba(44, 49, 182, 1) 100%);
+    color: white;
+    font-size: 90%;
+    font-weight: bold;
+}
+/* FIM BOX DE DICAS*/
+
+/* GRAFICO */
+.grafico {
+    width: 25%;
+    margin-top: 30px;
+    float: left;
+}
+
+.meu-grafico {
+    width: 45vw;
+    margin: auto;
+}
+/* FIM DO GRAFICO */
+
+@media only screen and (max-width: 1280px) {
+
+    .container_grafico {
+        width: 90%;
+    }
+
+    .components {
+        width: 40%;
+        font-size: 20px;
+        line-height: 42px;
+
+    }
+
+    .dicas {
+        margin-left: 30px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1030px) {
+
+
+    .components {
+        width: 30%;
+    }
+
+    .quadros {
+        width: 90%;
+        height: 45vh;
+        margin: 10px 0 0 0px;
+    }
+
+
+    .desempenho {
+        margin-top: 0%;
+        width: 60%;
+
+
+    }
+
+}
+
+@media only screen and (max-width: 1370px) {
+    .desempenho {
+        margin-left: 30px;
+        margin-top: 0%;
+        width: 47%;
+        float: left;
+    }
+
+    .dicas {
+        width: 20%;
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .desempenho {
+        width: 50%;
+    }
+
+    .dicas {
+        margin-left: 60px;
+        height: 17vh;
+    }
+}

@@ -1,0 +1,39 @@
+/* ----- style.css ----- */
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+ svg path:hover{
+	fill:#0000006e;
+	stroke: rgb(8, 8, 8);
+	stroke-width: .45;
+	
+}
+.st0, .st10, .st20, .st40, .st80{
+    transition:0.6s;
+	cursor:pointer;
+    stroke: rgb(255, 255, 255);
+	stroke-width: .45;
+} 
+.st0{
+	fill:#00842c;
+	
+}
+.st10{
+	fill:#f8d304;
+	
+}
+.st20{
+	fill:#f36f04;
+
+}
+.st40{
+	fill:#fd0800;
+	
+}
+.st80{
+	fill:#310101;
+
+}

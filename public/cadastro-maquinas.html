@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/image-removebg-preview (2).png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>4Live|Cadastro de máquina</title>
+</head>
+<body>
+         <!-- inicio header -->
+
+         <!-- <header class="container-header">
+            <div class="content-header">
+                <figure class="img-header">
+                    <img src="./img/image-removebg-preview (2).png" style="height: 85px;">
+                </figure>
+                <div class="responsive-menu" onclick="activate_menu()">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+    
+                <div class="itens-header" id="itens_header">
+                    <ul class="list-nav" id="list_nav">
+                        <span class="itens-nav">
+                            <a href="#nossos_servicos">Nossos Serviços</a>
+                        </span>
+                        <span class="itens-nav">
+                            <a href="#sobre_nos">Sobre Nós</a>
+                        </span>
+                        <span class="itens-nav">
+                            <a href="#nosso_time">Nosso Time</a>
+                        </span>
+                        <span class="itens-nav">
+                            <button class="btn-padrao">
+                                <a href="./acessos.html">Entrar</a>
+                            </button>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+        </header>
+     -->
+        <!-- fim header -->
+        <header>
+            
+        </header>
+
+    
+        <section class="container-cadastro">
+            <div class="content-cadastro">
+                <form action="" class="form-cadastro">
+                    <div class="itens-cadastro" style="padding: 1rem;">
+                        <h1 class="black-title">Cadastre uma nova máquina</h1>
+                    </div>
+                   <div>
+                       <h3>Funcionário responsavel</h3>
+                       <div class="itens-cadastro">
+                        <span class="title-item">
+                            <h2 class="black-text">Nome do Colarador:</h2>
+                        </span>
+                            <select class="box-item-select">
+                                <option value="Veltra Uzion">-</option>
+                                <option value="Ramone Veltra Uzion">Ramone Veltra Uzion</option>
+                            </select>
+                    </div>
+                    <div>
+                        <h3>Usuários</h3>
+                        <div class="itens-cadastro">
+                            <span class="title-item">
+                                <h2 class="black-text">Nome do Colarador:</h2>
+                            </span>
+                                <select class="box-item-select">
+                                    <option value="Veltra Uzion">-</option>
+                                    <option value="Ramone Veltra Uzion">Ramone Veltra Uzion</option>
+                                </select>
+                    </div>
+                    <div class="itens-cadastro">
+                        <span class="title-item">
+                            <h2 class="black-text">Setor</h2>
+                        </span>
+                        <select class="box-item-select">
+                            <option value="0">-</option>
+                            <option value="1">TI</option>
+                            <option value="2">Administração</option>
+                            
+                        </select>
+                    </div>
+                   </div>
+                    <div>
+                        <h3>Informações da máquina</h3>
+                        <div class="itens-cadastro">
+                            <span class="title-item">
+                                <h2 class="black-text">Processador:</h2>
+                            </span>
+                            <select class="box-item-select">
+                                <option value="o">-</option>
+                                <option value="o">Intel Core i3</option>
+                                <option value="o">Intel Core i5</option>
+                                <option value="o">Intel Core i7</option>
+                                <option value="o">Intel Core i9</option>
+                            </select>
+                        </div>
+                        <div class="itens-cadastro">
+                            <span class="title-item">
+                                <h2 class="black-text">RAM</h2>
+                            </span>
+                            <select class="box-item-select">
+                                <option value="">-</option>
+                                <option value="">1GB</option>
+                                <option value="">2GB</option>
+                                <option value="">3GB</option>
+                                <option value="">4GB</option>
+                                <option value="">8GB</option>
+                                <option value="">16GB</option>
+                            </select>
+                        </div>
+                        <div class="itens-cadastro">
+                            <span class="title-item">
+                                <h2 class="black-text">Disco</h2>
+                            </span>
+                            <select class="box-item-select">
+                                <option value="-">-</option>
+                                <option value="SSD">SSD</option>
+                                <option value="HDD">HDD</option>
+                                <option value="SCSI">SCSI</option>
+                            </select>
+                        </div>
+                        <div class="itens-cadastro">
+                            <span class="title-item">
+                                <h2 class="black-text">Sistema operacional</h2>
+                            </span>
+                            <select class="box-item-select">
+                                <option value="-">-</option>
+                                <option value="SSD">Linux</option>
+                                <option value="HDD">Wind</option>
+                                <option value="SCSI">MacIOS</option>
+                            </select>
+                        </div>
+                       
+                        <div class="itens-cadastro">
+                            <span class="box-btn-cadastro">
+                                <button onclick="Cadastrar()" class="btn-padrao">Cadastrar</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+</body>
+</html>
+<Script>
+    function Cadastrar() {
+        function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form-cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'cadastro-maquinas.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+    }
+   

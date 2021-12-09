@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suporte |Histo</title>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+
+    <!-- Google Font: Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__wobble" src="../img/image-removebg-preview (13).png" alt="" width="400">
+        </div>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="./index_suport.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Resumo máquina</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../index.html" class="brand-link">
+                <img src="../img/image-removebg-preview (12).png" alt=" Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">4live</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="warning">
+                        <a href="perfil_suporte.html" class="d-block" id="nome_user"></a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="index_suport.html" class="nav-link">
+                                <p>Dashboard </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Históricos
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="historico.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Todas as máquinas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cadastrar_maquina_suporte.sh" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    Cadastrar Máquina
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parametros_suporte.html" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Definir parâmetro
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="perfil_suporte.html" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>Perfil</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Resumo máquina</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Resumo máquina</li>
+                            </ol>
+                        </div>
+                       
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- AREA CHART -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Uso de CPU</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+                            <!-- DONUT CHART -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title" id="divTeste">Uso de Disco
+                                    </h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+
+                            <div class="div_teste"></div>
+                        </div>
+                        <!-- /.col (LEFT) -->
+                        <div class="col-md-6">
+                            <!-- LINE CHART -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Uso de Memória</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Informações máquina</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <span class="col-sm">
+                                        <div id="nome_usuario"></div>
+                                    </span>
+                                    <span class="col-sm">
+                                        <div id="email_usuario"></div>
+                                    </span>
+                                    <sapn class="col-sm">
+                                        <div id="setor_usuario"></div>
+                                    </span>
+                                    <span class="col-sm">
+                                        <div id="modelo_disco"></div>
+                                    </span>
+                                    <span class="col-sm">
+                                        <div id="tamanho_disco"></div>
+                                    </span>
+                                    <span class="col-sm">
+                                        <div id="sitema_operacional"></div>
+                                    </span>
+                                    <span class="col-sm">
+                                        <div id="modelo_processador"></div>
+                                    </span>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                        <!-- /.col (RIGHT) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- right col -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+
+            </div>
+            <!-- <strong>Copyright &copy;2021 <a ../index.html>4Live</a>.</strong> -->
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- ChartJS -->
+    <script src="../plugins/chart.js/Chart.min.js"></script>
+
+
+    <script>
+            atualizarNome()
+
+
+function atualizarNome() {
+    var nome = sessionStorage.getItem("nome_usuario_meuapp")
+    nome_user.innerHTML = `Olá, ${nome}`;
+}
+
+        obteterInformacoes()
+        obterLeiturasDisco()
+        obterLeituras()
+        setInterval(() => {
+            obterLeituras()
+        }, 5000)
+        
+        setInterval(() => {
+            obterLeiturasDisco()
+        }, 15000)
+
+        
+        function obterLeituras(fk_maquina) {
+            var fk_maquina = sessionStorage.getItem("id_maquina_meuapp")
+            fetch(`/publicacoes2/getLeiturasById${fk_maquina}`)
+                .then(resposta => {
+                    if (resposta.ok) {
+                        resposta.json().then(function(resposta) {
+                            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                            dataCpu(resposta);
+                            dataMemoria(resposta);
+                            
+
+                        });
+                    } else {
+                        console.error('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                .catch(function(error) {
+                    console.error(`Erro na obtenção das publicações: ${error.message}`);
+                });
+        }
+        function obteterInformacoes(fk_maquina) {
+            var fk_maquina = sessionStorage.getItem("id_maquina_meuapp")
+            fetch(`/publicacoes2/getUsuarioByMaquina${fk_maquina}`)
+                .then(resposta => {
+                    if (resposta.ok) {
+                        resposta.json().then(function(resposta) {
+                            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                            for(i = 0; i < resposta.length; i++) {
+                                nome_usuario.innerHTML = `Nome do usuário da máquina: <b>${resposta[i].nome}</b>`;
+                                email_usuario.innerHTML = `Email do usuário da máquina: <b>${resposta[i].email}</b>`;
+                                setor_usuario.innerHTML = `Setor do usuário da máquina: <b>${resposta[i].setor}</b>`;
+                                modelo_disco.innerHTML = `Modelo do disco da maquina: <b>${resposta[i].modelo_disco}</b>`;
+                                tamanho_disco.innerHTML = `Tamanho total do disco: <b>${resposta[i].tamanho_total}</b>` ;
+                                sitema_operacional.innerHTML = `Sistema Operacional da máquina: <b>${resposta[i].sistema_operacional}</b>`;
+                                modelo_processador.innerHTML = `Modelo do processador: <b>${resposta[i].modelo_processador}</b>` ;
+                            }
+                        });
+                    } else {
+                        console.error('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                .catch(function(error) {
+                    console.error(`Erro na obtenção das publicações: ${error.message}`);
+                });
+        }
+        function obterLeiturasDisco(fk_maquina) {
+            var fk_maquina = sessionStorage.getItem("id_maquina_meuapp")
+            fetch(`/publicacoes2/getLeituraDiscoById${fk_maquina}`)
+                .then(resposta => {
+                    if (resposta.ok) {
+                        resposta.json().then(function(resposta) {
+                            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                            
+                            dataDisco(resposta)
+
+                        });
+                    } else {
+                        console.error('Nenhum dado encontrado ou erro na API');
+                    }
+                })
+                .catch(function(error) {
+                    console.error(`Erro na obtenção das publicações: ${error.message}`);
+                });
+        }
+
+        function dataCpu(cpu) {
+            var dadosCpu = [];
+            var dadosInsercao = [];
+            for (i = 0; i < cpu.length; i++) {
+                dadosCpu.push(cpu[i].uso_cpu);
+                dadosInsercao.push(cpu[i].insercao_leitura);
+            }
+
+            chartCpu(dadosCpu, dadosInsercao);
+
+        }
+
+        function dataMemoria(memoria) {
+            var dadosMemoria = [];
+            var dadosInsercao = [];
+            
+            for (i = 0; i < memoria.length; i++) {
+                dadosMemoria.push(memoria[i].uso_memoria);
+                dadosInsercao.push(memoria[i].insercao_leitura);
+            }
+
+            chartMemoria(dadosMemoria, dadosInsercao);
+        }
+
+        function dataDisco(disco) {
+            var dadosDisco = [];
+            // var dadosInsercao = [];
+
+            for (i = 0; i < disco.length; i++) {
+                var total = disco[i].tamanho_total
+                var espacoDisp = disco[i].uso_disco
+
+                var uso = total - espacoDisp;
+
+                dadosDisco.push(uso);
+                dadosDisco.push(espacoDisp);
+            }
+
+            chartDisco(dadosDisco)
+        }
+
+        function chartCpu(cpu, insercao) {
+            var areaChartCanvas = document.getElementById('areaChart').getContext('2d')
+
+            var areaChartData = {
+                labels: insercao,
+                datasets: [{
+                    label: 'RAM',
+                    // backgroundColor: 'rgba(60,141,188,0.9)',
+                    borderColor: 'rgba(60,141,188,0.8)',
+                    pointRadius: false,
+                    pointColor: '#3b8bba',
+                    pointStrokeColor: 'rgba(60,141,188,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data: cpu
+
+                }]
+            }
+            var areaChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }]
+                }
+            }
+
+            // This will get the first returned node in the jQuery collection.
+            new Chart(areaChartCanvas, {
+                type: 'line',
+                data: areaChartData,
+                options: areaChartOptions
+            })
+        }
+        function chartMemoria(memoria, insercao) {
+            var lineChartCanvas = document.getElementById('lineChart').getContext('2d')
+
+            var areaChartData = {
+                labels: insercao,
+                datasets: [{
+                    label: 'RAM',
+                    // backgroundColor: 'rgba(60,141,188,0.9)',
+                    borderColor: 'rgba(60,141,188,0.8)',
+                    pointRadius: false,
+                    pointColor: '#3b8bba',
+                    pointStrokeColor: 'rgba(60,141,188,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data: memoria
+
+                }]
+            }
+            var areaChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }]
+                }
+            }
+
+            // This will get the first returned node in the jQuery collection.
+            new Chart(lineChartCanvas, {
+                type: 'line',
+                data: areaChartData,
+                options: areaChartOptions
+            })
+        }
+
+        function chartDisco(disco) {
+        
+
+
+            // var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+            var donutChartCanvas = document.getElementById('donutChart').getContext('2d')
+            var donutData = {
+                labels: [
+                'Espaço Utilizado',
+                'Espaço Disponivel',
+                ],
+                datasets: [{
+                    data: disco,
+                    backgroundColor: ['#FF0000', '#008000'],
+                }]
+            }
+            var donutOptions = {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                }
+                //Create pie or douhnut chart
+                // You can switch between pie and douhnut using the method below.
+            new Chart(donutChartCanvas, {
+                type: 'doughnut',
+                data: donutData,
+                options: donutOptions
+            })
+        }
+
+    </script>
+</body>
+
+</html>

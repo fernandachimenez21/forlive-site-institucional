@@ -1,0 +1,85 @@
+:root{
+    --primary: #4448D6;
+    --blue-gray: #989aed;
+    --light-purple: #686BE1;
+    --blue: #1E22CB;
+    --blue-2: #111598;
+    --white: #E9E9E9;
+    --yelow: #FFCB33;
+    --petrol: #04000C;
+}
+.container-header {
+    height: 15vh;
+    width: 100vw;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: var(--white);
+    margin: 8px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.responsive-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.content-header {
+    height: 100%;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header a {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.container-header a:hover {
+  text-decoration: underline;
+  text-decoration-color:#FFCB33;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  
+}
+
+.container-header .logo {
+    height: 80px;
+
+}
+
+.content-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-nav .nav {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    font-family: 'nunito';
+    display: flex;
+}
+
+.content-nav .nav .itens-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 155px;
+}

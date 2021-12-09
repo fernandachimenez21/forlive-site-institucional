@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suporte |Perfil</title>
+
+    <!-- Google Font: Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="./index_suport.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Dashboard</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../index.html" class="brand-link">
+                <img src="../img/image-removebg-preview (12).png" alt=" Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">4live</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="warning">
+                        <a href="perfil_suporte.html" class="d-block" id="nome_user"></a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="index_suport.html" class="nav-link">
+                                <p>Dashboard </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Históricos
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="historico.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Todas as máquinas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cadastrar_maquina_suporte.sh" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    Cadastrar Máquina
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="parametros_suporte.html" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Visão Geral
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index_suport.html" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>Perfil</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Perfil</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                      
+
+                            <!-- About Me Box -->
+
+                            <!-- /.card -->
+                        
+                        <!-- /.col -->
+                        <div class="col-md-12">
+                            <div class="card">
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="active tab-pane" id="activity">
+                                            </div>
+                                        </div>
+                                        <!-- /.tab-pane -->
+
+                                        <div class="tab-pane" id="settings">
+                                            <form class="form-horizontal" id="form_alterar">
+                                                <div class="form-group row">
+                                                    <label for="ipt_nome" class="col-sm-2 col-form-label">Nome</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="ipt_nome" placeholder="Nome" name="nome">
+                                                        <div class="msg_nome"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="ipt_email" class="col-sm-2 col-form-label">Email</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="ipt_email" placeholder="Email" name="email">
+                                                        <div class="msg_email"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="ipt_telefone" class="col-sm-2 col-form-label">Telefone</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="number" class="form-control" id="ipt_telefone" placeholder="telefone" name="telefone">
+                                                        <div class="msg_telefone"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="ipt_telefone" class="col-sm-2 col-form-label">Senha</label>
+                                                    <div class="msg_senha"></div>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="ipt_senha" placeholder="********" name="senha">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="offset-sm-2 col-sm-10">
+                                                        <button type="button" onclick="validar_alteracao()" class="btn btn-danger">Salvar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                    </div>
+                                    <!-- /.tab-content -->
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+
+            </div>
+            <strong>Copyright &copy;2021 <a ../index.html>4Live</a>.</strong>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+</body>
+
+</html>
+
+<script>
+    // Expressão nome
+    var nomeReg = /^[À-úA-z ]{1,}$/;;
+    //Expressão Senha
+    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-Z]{1})(?=.*[a-z]{1})[a-zA-Z0-9]{6,}$/;
+    // Expressão email
+    var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
+    // Expressão telefone
+    var telefoneReg = /^[0-9]{2,}[0-9]{4}[0-9]{4}$/;
+
+    setInterval(() => {
+        atualizarNome()
+    }, 5000)
+    
+
+
+function atualizarNome() {
+    var nome = sessionStorage.getItem("nome_usuario_meuapp")
+    nome_user.innerHTML = `Olá, ${nome}`;
+}
+
+    function validar_nome() {
+        var nome = ipt_nome.value;
+        if (nome.match(nomeReg)) {
+            msg_nome.innerHTML = '';
+            msg_nome.style.display = 'none';
+            ipt_nome.style.border = '3px solid green';
+            ipt_nome.style.color = 'black';
+        } else {
+            msg_nome.style.display = 'block';
+            msg_nome.innerHTML = `Verifique o campo preenchido`;
+            msg_nome.style.color = 'red'
+            ipt_nome.style.border = '3px solid red';
+            ipt_nome.style.color = 'red';
+        }
+    }
+
+    function validar_email() {
+        var email = ipt_email.value;
+        if (email.match(emailReg)) {
+            msg_email.innerHTML = '';
+            msg_email.style.display = 'none';
+            ipt_email.style.border = '3px solid green';
+            ipt_email.style.color = 'black';
+        } else {
+            msg_email.style.display = 'block';
+            msg_email.innerHTML = `Digite um email válido`;
+            msg_email.style.color = 'red';
+            ipt_email.style.border = '3px solid red'
+            ipt_email.style.color = 'red'
+        }
+    }
+
+    function validar_telefone() {
+        var telefone = ipt_telefone.value;
+        if (telefone.match(telefoneReg)) {
+            msg_telefone.innerHTML = '';
+            msg_telefone.style.display = 'none';
+            ipt_telefone.style.border = '3px solid green';
+            ipt_telefone.style.color = 'black';
+        } else {
+            msg_telefone.style.display = 'block';
+            msg_telefone.innerHTML = `Digite um número de telefone válido`;
+            msg_telefone.style.color = 'red';
+            ipt_telefone.style.border = '3px solid red'
+        }
+    }
+
+    function validar_senha() {
+        var senha = ipt_senha.value;
+        if (senha.match(senhaReg)) {
+            msg_senha.style.display = 'none';
+            msg_senha.innerHTML = '';
+            ipt_senha.style.border = '3px solid green';
+            ipt_senha.style.color = 'black';
+        } else {
+            msg_senha.style.display = 'block'
+            msg_senha.innerHTML = ` A senha deve conter pelo menos 6 dígitos,
+            <br>1 letra maiúscula, 
+            <br>1 letra minúscula 
+            <br>e 3 números'`;
+            msg_senha.style.color = 'red';
+            ipt_senha.style.border = '3px solid red';
+            ipt_senha.style.color = 'red';
+        }
+    }
+
+
+
+    function alterarNome(id_usuario) {
+        var id_usuario = sessionStorage.getItem("id_usuario_meuapp");
+        var formulario = new URLSearchParams(new FormData(form_alterar));
+        fetch(`/usuarios/alterarNome${id_usuario}`, {
+            method: "put",
+            body: formulario
+        }).then(function(response) {
+            console.log(response)
+
+        });
+
+        return false;
+    }
+
+    function alterarEmail(id_usuario) {
+        var id_usuario = sessionStorage.getItem("id_usuario_meuapp");
+        var formulario = new URLSearchParams(new FormData(form_alterar));
+        fetch(`/usuarios/alterarEmail${id_usuario}`, {
+            method: "put",
+            body: formulario
+        }).then(function(response) {
+            console.log(response)
+
+        });
+
+        return false;
+    }
+
+    function alterarSenha(id_usuario) {
+        var id_usuario = sessionStorage.getItem("id_usuario_meuapp");
+        var formulario = new URLSearchParams(new FormData(form_alterar));
+        fetch(`/usuarios/alterarSenha${id_usuario}`, {
+            method: "put",
+            body: formulario
+        }).then(function(response) {
+            console.log(response)
+
+        });
+
+        return false;
+    }
+
+    function alterarTelefone(id_usuario) {
+        var id_usuario = sessionStorage.getItem("id_usuario_meuapp");
+        var formulario = new URLSearchParams(new FormData(form_alterar));
+        fetch(`/usuarios/alterarTelefone${id_usuario}`, {
+            method: "put",
+            body: formulario
+        }).then(function(response) {
+            console.log(response)
+
+        });
+
+        return false;
+    }
+
+    function validar_alteracao() {
+        var nome = ipt_nome.value;
+        var email = ipt_email.value;
+        var senha = ipt_senha.value;
+        var telefone = ipt_telefone.value;
+        // Valida Campos
+        if ((nome.match(nomeReg) && email.match(emailReg) && senha.match(senhaReg) && telefone.match(telefoneReg))) {
+            alterarNome();
+            alterarEmail();
+            alterarSenha();
+            alterarTelefone();
+        } else {
+            div_msg_erro.style.color = 'red'
+            div_msg_erro.innerHTML = `Verifique os campos preenchidos`
+        }
+
+
+
+    }
+</script>

@@ -1,0 +1,137 @@
+:root {
+    --primary: #9887f1;
+    --light-primary: #e1e2eb;
+    --purple: #5F62E7;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+    --light-green: #00A3B4;
+    --black2: #4d4b4b;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-y: scroll;
+}
+
+.main {
+    display: flex;
+}
+
+.container-login {
+    width: 40vw;
+    height: 100vh;
+    background-image: linear-gradient(180deg, var(--purple), var(--primary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-login {
+    height: 85%;
+    width: 90%;
+    border-radius: 25px;
+}
+
+.form-login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-login img{
+    width: 90px;
+    padding-bottom: 16px;
+
+}
+.item-login {
+    margin: 15px;
+    width: 75%;
+}
+
+.box-btn-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.container-img-login {
+    width: 60vw;
+    height: 100vh;
+}
+
+.img-login {
+    width: 60vw;
+    height: 100vh;
+    background-image: url("../img/img-login4.jpeg");
+    box-shadow: inset 5px 0px 40px 0px #000000;
+}
+--------------------------------------------------------------------------
+ .social-col ul li a{
+     color: pink;
+ }
+ 
+ .social-links{
+     display: grid;
+     justify-content: right;
+     padding-top: 10%;
+     height: 50vh;
+ }
+ .social-col .social-links span{
+     display: flex;
+     align-items: baseline;
+     justify-content: right;
+     padding-right: 8px;
+ }
+ .social-col .social-links a{
+     display: block;
+     height: 40px;
+     width: 40px;
+     background-color: rgba(255,255,255,0.2);
+     margin:0 10px 10px 0;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all 0.5s ease;
+     text-decoration: none;
+     
+ }
+ .social-col .social-links p{
+     color: var(--primary);
+     padding: 5px;
+     background-color: #e5e2f52a;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ .social-col .social-links a:hover{
+     color: #ffffff;
+     padding: 2px;
+     margin: 2px;
+     background-color:var(--primary);
+ }
+ .social-col .social-links p:hover{
+    display: block;
+
+ }
+.img-aprenta {
+    color: white;
+    padding: 0 10%;
+    font-family: "nunito";
+}
+.img-aprenta h1{
+    font-size: 36px;
+}
+
+
+
+
+
+
+
+
+
+

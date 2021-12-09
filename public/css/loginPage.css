@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.loginForm > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm > button {
+    margin-top: 8px;
+}

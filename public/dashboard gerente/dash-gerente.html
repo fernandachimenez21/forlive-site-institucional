@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/image-removebg-preview (6).png">
+    <link rel="stylesheet" href="../dashboard suporte/css/dash_suporte.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/dash-gerente.css">
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>4Live | Dashboard Gerente                </title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="container-nav">
+            <div class="content-nav">
+                <div>
+                    <figure>
+                        <img src="../img/logo fonte invisivel.png" class="icones">
+                    </figure>
+                </div>
+
+                <ul class="itens-nav-dash">
+                    <li class="item-nav-dash" id="item_1">
+                        <a href="../index.html" class="text">Home</a>
+                    </li>
+                    <li class="item-nav-dash" id="item_2">
+                        <a href="../cadastro-maquinas.html"><i class="fas fa-desktop icons-i"></i></a>
+                        <a href="../cadastro-maquinas.html" class="text">Cadastrar Máquina</a>
+                    </li>
+                    <li class="item-nav-dash" id="item_2">
+                        <a href="../cadastro.html"><i class="fas fa-user-friends icons-i"></i></a>
+                        <a href="../cadastro.html" class="text">Cadastrar Colaborador</a>
+                    </li>
+                </ul>
+
+                <div class="box-logout">
+                    <span class="item-nav-dash" id="item_4">
+                        <a href="../index.html"><i class="fas fa-sign-out-alt icons-i"></i></a>
+                        <h3> <a href="../index.html" class="text">Sair</a></h3>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-dash-gerente">
+            <div class="content-dash-gerente">
+                <div class="header-dash-gerente">
+                    <div class="content-header-dash-gerente">
+                        <span>
+                            <h1 class="black-title">Dados da Unidade</h1>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-respiro">
+                    <div class="line-boxes">
+                        <div class="boxes">
+                            <div class="box">
+                                <span>
+                                    <h1 class="title-box">Colaboradores Cadastrados</h1>
+                                </span>
+                                <span>
+                                    <h1 class="black-title">60</h1>
+                                </span>
+                            </div>
+                            <div class="box">
+                                <span>
+                                    <h1 class="title-box">Maquinas Operando</h1>
+                                </span>
+                                <span>
+                                    <h1 class="black-title">80%</h1>
+                                </span>
+                                <span class="content-grafico-box">
+                                    <canvas id="pie"></canvas>
+                                </span>
+                            </div>
+                            <div class="box">
+                                <span>
+                                    <h1 class="title-box">Máquinas em Reparo</h1>
+                                </span>
+                                <span>
+                                    <h1 class="black-title">12%</h1>
+                                </span>
+                                <span class="content-grafico-box">
+                                    <canvas id="pie2"></canvas>
+                                </span>
+                            </div>
+                            <div class="box">
+                                <span>
+                                    <h1 class="title-box">Histórico Críticos</h1>
+                                </span>
+                                <span>
+                                    <h1 class="black-title">12</h1>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="container-grafico">
+                        <div class="content-grafico">
+                            <canvas id="myChart" width="200px" height="200px"></canvas>
+                        </div>
+                        <div class="content-grafico">
+                            <canvas id="Chart" width="200px" height="200px"></canvas>
+                        </div>
+                        <div class="content-grafico">
+                            <canvas id="graph" width="200px" height="200px"></canvas>
+                        </div>
+                </div>
+
+        </section>
+        </div>
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>
+
+
+<script>
+
+    var pieGraph = document.getElementById('pie').getContext('2d');
+    var pieChart = new Chart(pieGraph, {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [80, 20],
+                backgroundColor: [
+                    'rgb(000, 000, 000)',
+                    'rgb(225,226,235)'
+                ],
+                borderWidth: 1,
+                borderColor: 'rgb(000,000,000)'
+            }]
+        },
+    });
+
+
+    var pieGraph2 = document.getElementById('pie2').getContext('2d');
+    var pieChart2 = new Chart(pieGraph2, {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [12, 88],
+                backgroundColor: [
+                    'rgb(000, 000, 000)',
+                    'rgb(225,226,235)'
+                ],
+                borderWidth: 1,
+                borderColor: 'rgb(000,000,000)'
+            }]
+        },
+    });
+
+    var teste = [100,2,3,5,6,56]
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6'],
+            datasets: [{
+                label: 'Problemas Relatados',
+                data: teste,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 3,
+                yAxisID: 'yAxis'
+            }],
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 0, 0, 0)",
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 0, 0, 0)",
+                    }
+                }]
+            }
+        }
+
+    });
+
+    var ctx = document.getElementById('Chart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6'],
+            datasets: [{
+                label: 'Problemas Resolvido',
+                data: [6, 7, 8, 1, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+
+    var ctx = document.getElementById('graph').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6'],
+            datasets: [{
+                label: 'Maquinas Paradas',
+                data: [1, 3, 4, 1, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+</script>

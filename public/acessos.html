@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/acessos.css">
+  <title>4Live|Acessos</title>
+</head>
+<body>
+    
+    <!-- inicio header -->
+
+    <header class="container-header">
+        <div class="content-header">
+            <figure class="img-header">
+                <a href="./index.html">
+                    <img src="./img/logo fonte invisivel.png" class="icones">
+                </a>
+            </figure>
+            <div class="responsive-menu" onclick="activate_menu()">
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+
+            <div class="itens-header" id="itens_header">
+                <ul class="list-nav" id="list_nav">
+                    <span class="itens-nav">
+                        <a href="#nossos_servicos">Nossos Serviços</a>
+                    </span>
+                    <span class="itens-nav">
+                        <a href="#sobre_nos">Sobre Nós</a>
+                    </span>
+                    <span class="itens-nav">
+                        <a href="#nosso_time">Nosso Time</a>
+                    </span>
+                    <span class="itens-nav">
+                        <button class="btn-padrao">
+                            <a href="./acessos.html">Entrar</a>
+                        </button>
+                    </span>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+  <!-- fim header -->
+
+    <section class="container-acessos">
+        <div class="content-acessos">
+            <span>
+                <h1 class="black-title">Selecione o seu nível de acesso</h1>
+            </span>
+            <div class="itens-acessos">
+                <a href="./login.html" class="acesso">
+                    <span>
+                        <img src="./img/homem-de-negocios.png" class="icones">
+                      </span>
+                      <span>
+                        <h2 class="black-title">Gestor</h2>
+                      </span>
+                </a>
+                <a href="./login.html" class="acesso">
+                    <span>
+                        <img src="./img/suporte-ao-cliente.png" class="icones">
+                      </span>
+                      <span>
+                        <h2 class="black-title">Suporte</h2>
+                      </span>
+                </a>
+                <a href="./login.html" class="acesso">
+                    <span>
+                        <img src="./img/recepcao.png" class="icones">
+                      </span>
+                      <span>
+                        <h2 class="black-title">Recepção</h2>
+                      </span>
+                </a>
+            </div>
+        </div>
+    </section>  
+
+
+    <footer class="container-footer">
+      <div class="content-footer">
+          <figure class="figure-footer">
+              <img src="./img/logo fonte invisivel.png" style="height: 85px;">
+          </figure>
+          <div class="footer">
+              <span>
+                  <a href=""></a>
+              </span>
+              <span>
+                  <a href=""></a>
+              </span>
+              <span>
+                  <a href=""></a>
+              </span>
+              <span>
+                  <a href=""></a>
+              </span>
+          </div>
+      </div>
+  </footer>
+
+
+</body>
+</html>
+
+<script>
+    function activate_menu() {
+        const nav = document.getElementById('itens_header');
+        nav.classList.toggle('active');
+    }
+</script>

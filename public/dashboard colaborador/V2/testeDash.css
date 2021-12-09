@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Cabeçalho principal*/
+.navbar-global {
+    background-color: #5F62E7 !important;
+    position: fixed;
+    left: 200px;
+}
+
+/*Texto Cabeçalho principal*/
+.navbar-global .navbar-brand {
+    color: white;
+}
+
+/*Lista Cabeçalho principal*/
+.navbar-global .navbar-user>li>a {
+    color: white;
+}
+.navbar-fixed-top{
+    box-shadow: 0 4px 12px -6px #000;
+    /* position: absolute;
+    left: 200px; */
+    /* left: 60px; */
+}
+
+/*Navbar lateral*/
+.navbar-primary {
+    background-color: #5F62E7;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 200px;
+    z-index: 8;
+    overflow: hidden;
+    box-shadow: inset -4px 0px 30px -20px #000000;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+/*Navbar lateral ocultada*/
+.navbar-primary.collapsed {
+    width: 60px;
+}
+
+/*Navbar lateral - tamanho icon*/
+.navbar-primary.collapsed .glyphicon {
+    font-size: 28px;
+}
+
+/*Navbar lateral - ocultando texto dos ícones*/
+.navbar-primary.collapsed .nav-label {
+    display: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white !important;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white !important;
+}
+
+/*Navbar lateral - botão ocultar*/
+.btn-expand-collapse {
+    position: absolute;
+    display: block;
+    left:0px;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    box-shadow: 1px -3px 32px -14px rgba(0,0,0,0.55);
+    /* border-top: solid 1px rgba(51, 51, 51, 0.24); */
+    color:  rgba(51, 51, 51, 0.24);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Botão expandir/ocultar */
+.btn-expand-collapse:hover,
+.btn-expand-collapse:focus {
+    background-color: rgba(51, 51, 51, 0.24);
+    color: white;
+}
+
+.btn-expand-collapse:active {
+    background-color:  rgba(51, 51, 51, 0.24);
+}
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-primary-menu li a {
+    display: block;
+    padding: 10px 18px;
+    text-align: left;
+    border-bottom: solid 1px #5F62E7;
+    color: #ccc;
+}
+
+.navbar-primary-menu li a:hover {
+    background-color:  rgba(51, 51, 51, 0.24);
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li a .glyphicon {
+    margin-right: 6px;
+}
+
+.navbar-primary-menu li a:hover .glyphicon {
+    color: #5F62E7;
+}
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.collapsed+.main-content {
+    margin-left: 60px;
+    position: fixed;
+}
+
+.list-group {
+    width: 50%;
+    height: 50%;
+}
+main{
+    position: absolute;
+    left: 215px;
+}
+/* CONFIG TEXTO */
+.main-content {
+    color:  rgba(51, 51, 51, 0.24);
+}
+
+p {
+    color:  rgba(51, 51, 51, 0.24);
+}
+
+
+/* CONFIG LOGO */
+img {
+    width: 100%;
+
+}

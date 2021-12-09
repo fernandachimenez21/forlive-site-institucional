@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>4Live | Cadastro</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="container-img-cadastro">
+            <div class="content-img-cadastro">
+                <figure class="img-cadastro">
+
+                </figure>
+            </div>
+        </section>
+
+        <section class="container-cadastro">
+            <div class="content-cadastro">
+                <form class="form-cadastro" method="post" id="form_cadastro">
+                    <span>
+                        <h1 class="title">Cadastre um novo colaborador</h1>
+                    </span>
+                    <span class="item-cadastro">
+                        <h2 class="text">Nome</h2>
+                        <input class="ipt-padrao" id="ipt_nome" name="nome" onkeyup="validar_nome()">
+                        <div id="msg_nome"></div>
+                    </span>
+                    <span class="item-cadastro">
+                        <h2 class="text">E-mail</h2>
+                        <input class="ipt-padrao" id="ipt_email" name="email" onkeyup="validar_email()">
+                        <div id="msg_email"></div>
+                    </span>
+                    <span class="item-cadastro">
+                        <h2 class="text">Senha</h2>
+                        <input class="ipt-padrao" type="password" id="ipt_senha" name="senha" onkeyup="validar_senha()">
+                        <div id="msg_senha"></div>
+                    </span>
+                    <span class="item-cadastro">
+                        <h2 class="text">Telefone</h2>
+                        <input class="ipt-padrao" type="number" id="ipt_telefone" name="telefone"
+                            onkeyup="validar_telefone()">
+                        <div id="msg_telefone"></div>
+                    </span>
+                    <span class="item-cadastro">
+                        <h2 class="text">Unidade</h2>
+                        <input class="ipt-padrao" id="ipt_unidade" name="unidade">
+                        <div id="msg_unidade"></div>
+                    </span>
+                    <span class="box-flex-cadastro">
+                        <span class="item-left-cadastro">
+                            <h2 class="text">Setor</h2>
+                            <input class="ipt-padrao" id="ipt_setor" name="setor">
+                        </span>
+                    <span class="item-right-cadastro">
+                            <h2 class="text">Nível de Acesso</h2>
+                            <select class="ipt-padrao" name="nivel_acesso" id="ipt_nvl_acesso">
+                                <option value="0">Selecione</option>
+                                <option value="1">Gerente</option>
+                                <option value="2">Suporte</option>
+                            </select>
+                        </span>
+                    </span>
+                    <span class="box-btn-cadastro">
+                        <button class="btn-padrao" type="button" onclick="validar_cadastro()">Cadastrar</button>
+                        <div id="div_msg_erro"></div>
+                    </span>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+
+<script>
+    // Expressão nome
+    var nomeReg = /^[À-úA-z ]{1,}$/;;
+    //Expressão Senha
+    var senhaReg = /^(?=.*[0-9]{3})(?=.*[A-Z]{1})(?=.*[a-z]{1})[a-zA-Z0-9]{6,}$/;
+    // Expressão email
+    var emailReg = /^([À-úA-z0-9._-]+@[a-z0-9._-]+\.[A-z0-9_-]+)$/;
+    // Expressão telefone
+    var telefoneReg = /^[0-9]{2,}[0-9]{4}[0-9]{4}$/;
+
+
+
+    function validar_nome() {
+        var nome = ipt_nome.value;
+        if (nome.match(nomeReg)) {
+            msg_nome.innerHTML = '';
+            msg_nome.style.display = 'none';
+            ipt_nome.style.border = '3px solid green';
+            ipt_nome.style.color = 'white';
+        } else {
+            msg_nome.style.display = 'block';
+            msg_nome.innerHTML = `Verifique o campo preenchido`;
+            msg_nome.style.color = 'red'
+            ipt_nome.style.border = '3px solid red';
+            ipt_nome.style.color = 'red';
+        }
+    }
+
+    function validar_email() {
+        var email = ipt_email.value;
+        if (email.match(emailReg)) {
+            msg_email.innerHTML = '';
+            msg_email.style.display = 'none';
+            ipt_email.style.border = '3px solid green';
+            ipt_email.style.color = 'white';
+        } else {
+            msg_email.style.display = 'block';
+            msg_email.innerHTML = `Digite um email válido`;
+            msg_email.style.color = 'red';
+            ipt_email.style.border = '3px solid red'
+            ipt_email.style.color = 'red'
+        }
+    }
+
+    function validar_telefone() {
+        var telefone = ipt_telefone.value;
+        if (telefone.match(telefoneReg)) {
+            msg_telefone.innerHTML = '';
+            msg_telefone.style.display = 'none';
+            ipt_telefone.style.border = '3px solid green';
+            ipt_telefone.style.color = 'white';
+        } else {
+            msg_telefone.style.display = 'block';
+            msg_telefone.innerHTML = `Digite um número de telefone válido`;
+            msg_telefone.style.color = 'red';
+            ipt_telefone.style.border = '3px solid red'
+        }
+    }
+
+    function validar_senha() {
+        var senha = ipt_senha.value;
+        if (senha.match(senhaReg)) {
+            msg_senha.style.display = 'none';
+            msg_senha.innerHTML = '';
+            ipt_senha.style.border = '3px solid green';
+            ipt_senha.style.color = 'white';
+        } else {
+            msg_senha.style.display = 'block'
+            msg_senha.innerHTML = ` A senha deve conter pelo menos 6 dígitos,
+            <br>1 letra maiúscula, 
+            <br>1 letra minúscula 
+            <br>e 3 números'`;
+            msg_senha.style.color = 'red';
+            ipt_senha.style.border = '3px solid red';
+            ipt_senha.style.color = 'red';
+        }
+    }
+
+    function validar_cadastro() {
+        // Valores dos inputs
+        var nome = ipt_nome.value;
+        var email = ipt_email.value;
+        var senha = ipt_senha.value;
+        var telefone = ipt_telefone.value;
+        var unidade = ipt_unidade.value;
+        var nvl_acesso = ipt_nvl_acesso.value;
+        // Valida Campos
+        if ((nome.match(nomeReg) && email.match(emailReg) && senha.match(senhaReg) && (nvl_acesso > 0) && telefone.match(telefoneReg))) {
+            if (nvl_acesso == 1) {
+                cadastrar();
+                cadastrarGerente();
+            } else if (nvl_acesso == 2) {
+                cadastrar();
+            }
+        } else {
+            div_msg_erro.style.color = 'red'
+            div_msg_erro.innerHTML = `Verifique os campos preenchidos`
+        }
+
+
+    }
+
+    function cadastrarGerente() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch(`/usuarios/cadastrarGerente`, {
+            method: "POST",
+            body: formulario
+        }).then(function(response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+                console.log(response.json.toString());
+
+                console.log('Erro de cadastro!');
+            }
+        });
+
+        return false;
+    }
+
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch(`/usuarios/cadastrar`, {
+            method: "POST",
+            body: formulario
+        }).then(function(response) {
+
+            if (response.ok) {
+
+                window.location.href = 'login.html';
+
+            } else {
+                console.log(response.json.toString());
+
+                console.log('Erro de cadastro!');
+            }
+        });
+
+        return false;
+    }
+</script>
